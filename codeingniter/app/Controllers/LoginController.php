@@ -25,8 +25,10 @@ class LoginController extends Controller
         $session = session();          
         if($rows==1){
             return view(){
+                
             echo 'user_name';
             echo 'password';
+                
             }
         }else{
             $session->setFlashdata('msg', 'Invalid User');
