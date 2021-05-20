@@ -25,6 +25,8 @@ class LoginController extends Controller
         $session = session();          
         if($rows==1){
             return view(success)
+                echo $this->request->getVar('user_id')
+                echo $this->request->getVar('password') 
         }else{
             $session->setFlashdata('msg', 'Invalid User');
             return view('login');
